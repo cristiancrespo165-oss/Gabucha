@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Gabucha ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      /* Fondo romántico pero más suave y oscuro */
+      background: linear-gradient(135deg, #2b0f1c, #3d1a33, #4b1c3f);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: #fff;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      padding: 50px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      max-width: 600px;
+      margin: 15% auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffb6c1;
+      text-shadow: 0 0 10px #ff6f91;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: #ffe6f0;
+    }
+
+    .heart {
+      font-size: 4rem;
+      margin-top: 20px;
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+      transition: all 0.3s ease;
+    }
+
+    /* Corazón encendido */
+    .heart.on {
+      color: red;
+      text-shadow: 0 0 20px #ff1a1a, 0 0 40px #e60000;
+      transform: scale(1.4);
+      animation: heartbeat 0.6s infinite;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);}
+      50% { transform: scale(1.2);}
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1.2);}
+      50% { transform: scale(1.4);}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Gabucha ❤️</h1>
+    <p>
+      Este pequeño rincón está dedicado solo a ti,  
+      porque eres mi razón de sonreír cada día.  
+      Eres la melodía más dulce en mi corazón.  
+    </p>
+    <div class="heart" id="heart">❤️</div>
+  </div>
+
+  <script>
+    const heart = document.getElementById("heart");
+    heart.addEventListener("click", () => {
+      heart.classList.toggle("on");
+    });
+  </script>
+</body>
+</html>
